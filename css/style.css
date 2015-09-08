@@ -1,0 +1,237 @@
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+h2,
+p,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.main-menu__item {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  margin-right: -4px;
+  vertical-align: top;
+}
+.main-menu__item a {
+  display: block;
+  padding: 20px 0;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+.main-menu__item--img {
+  background: url("/Sedona-Adaptive-/graph/img/header-logo-sedona.png") no-repeat 50% 0;
+  height: 70px;
+}
+.header-logo img {
+  max-width: 100%;
+  position: relative;
+  top: -10px;
+  z-index: 5;
+}
+/* .header-logo {
+    background: url("/Sedona-Adaptive-/graph/img/header-bg-sedona.jpg") no-repeat 0 0;
+    height: auto;
+    max-width: 100%;
+} */
+.promo {
+  padding: 60px 0;
+}
+.promo__title {
+  width: 500px;
+  /* 50% */
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 21px;
+  line-height: 26px;
+}
+.promo__text {
+  margin-bottom: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 14px;
+  line-height: 26px;
+}
+.features {
+  text-transform: uppercase;
+}
+.features__bg {
+  background: url("/Sedona-Adaptive-/graph/pict/main-bg-1.jpg") no-repeat 100% 0;
+}
+.features__bg--2 {
+  background: url("/Sedona-Adaptive-/graph/pict/main-bg-2.jpg") no-repeat 0 0;
+}
+.features__block {
+  float: left;
+  width: 34%;
+  padding: 50px 5% 65px 5%;
+  text-align: center;
+  background: #81b3d2;
+  color: white;
+  box-sizing: border-box;
+}
+.features__block--2 {
+  float: right;
+}
+.features__title {
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 26px;
+}
+.features__number {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.features__intro {
+  font-size: 14px;
+  line-height: 21px;
+}
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.features-list__item {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 5% 85px 5%;
+  vertical-align: top;
+  margin-right: -4px;
+}
+.features-list img {
+  margin-bottom: 25px;
+}
+.features-list__title {
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.features-list__content,
+.features-list__number {
+  font-size: 14px;
+  line-height: 21px;
+}
+.features-list__number {
+  display: block;
+  margin-bottom: 20px;
+}
+.features-list--bg {
+  background: #eeeeee;
+}
+.features-list--bg .features-list__item {
+  padding-bottom: 55px;
+  padding-top: 50px;
+}
+footer {
+  text-transform: uppercase;
+}
+footer .inner {
+  background: url("/Sedona-Adaptive-/graph/img/footer-map-1280.jpg") no-repeat 0 265px;
+}
+footer h2 {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 26px;
+}
+footer p {
+  width: 450px;
+  /* 34% */
+  min-height: 70px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+}
+.form__header {
+  width: 570px;
+  padding: 30px 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  color: white;
+  font-weight: bold;
+  background: #766357;
+}
+.form {
+  width: 570px;
+  /* 47% */
+  min-height: 400px;
+  padding: 60px 4.5% 55px 4.5%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid grey;
+}
+.contacts {
+  padding: 35px 0;
+}
+.contacts__logo,
+.contacts__social,
+.contacts__author {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  margin-right: -4px;
+  text-align: center;
+}
+.contacts__logo {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+.contacts__social-buttons {
+  margin-right: 2px;
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background: #81b3d2;
+}
+.contacts span {
+  display: inline-block;
+  padding-right: 50px;
+  font-size: 14px;
+  line-height: 33px;
+}
+.contacts span:nth-child(1) {
+  background: url("/Sedona-Adaptive-/graph/pict/logo-htmlacademy.svg") no-repeat 90% 0;
+}
+.contacts span:nth-child(2) {
+  background: url("/Sedona-Adaptive-/graph/pict/logo-glukhanko.svg") no-repeat 75% 1px;
+}

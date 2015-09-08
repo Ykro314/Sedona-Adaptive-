@@ -1,0 +1,96 @@
+.promo {
+    padding: 60px 0;
+    &__title {
+        width: 500px; /* 50% */
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: @font-size-21;
+        line-height: @line-height-26;
+    }
+    &__text {
+        margin-bottom: 55px;
+        text-align: center;
+        text-transform: uppercase;
+        color: @color-p;
+        font-size: @font-size-14;
+        line-height: @line-height-26;
+    }
+}
+
+.features {
+    text-transform: uppercase;
+    &__bg {
+        background: url("/Sedona-Adaptive-/graph/pict/main-bg-1.jpg") no-repeat 100% 0;
+    }
+    &__bg--2 {
+        background: url("/Sedona-Adaptive-/graph/pict/main-bg-2.jpg") no-repeat 0 0;
+    }
+    &__block {
+        float: left;
+        width: 34%;
+        padding: 50px 5% 65px 5%;
+        text-align: center;
+        background: #81b3d2;
+        color: white;
+        box-sizing: border-box;
+    }
+    &__block--2 {
+        float: right;
+    }
+    &__title {
+        margin-bottom: 10px;
+        font-size: @font-size-21;
+        line-height: @line-height-26;
+    }
+    &__number {
+        display: block;
+        margin-bottom: 20px;
+        font-size: @font-size-14;
+        line-height: @line-height-21;
+    }
+    &__intro {
+        font-size: @font-size-14;
+        line-height: @line-height-21;
+    }
+}
+
+.features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 60px 5% 85px 5%;
+        vertical-align: top;
+        margin-right: -4px;
+    }
+    img {
+        margin-bottom: 25px;
+    }
+    &__title {
+        font-size: @font-size-21;
+        line-height: @line-height-26;
+        margin-bottom: 20px;
+    }
+    &__content,
+    &__number{
+        font-size: @font-size-14;
+        line-height: @line-height-21;
+    }
+    &__number {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+.features-list--bg {
+    background: #eeeeee;
+    .features-list__item {
+        padding-bottom: 55px;
+        padding-top: 50px;
+    }
+}
