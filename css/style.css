@@ -192,12 +192,94 @@ footer p {
   width: 570px;
   /* 47% */
   min-height: 400px;
-  padding: 60px 4.5% 55px 4.5%;
+  padding: 60px 45px 55px 50px;
   margin: 0 auto;
   margin-bottom: 80px;
   box-sizing: border-box;
   background: white;
-  border: 1px solid grey;
+}
+.form__input-text {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.form__input-text input[type='text'] {
+  display: inline-block;
+  width: 350px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin-left: 10px;
+  background: url("/Sedona-Adaptive-/graph/img/icon-calendar.svg") no-repeat 97.5% 50% #f2f2f2;
+  border: none;
+}
+.form__input-text input[type='text']:hover {
+  background-image: url("/Sedona-Adaptive-/graph/img/icon-calendar-hover.svg");
+}
+.form__input-counter {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 55px;
+}
+.form__input-counter input {
+  width: 120px;
+  text-align: center;
+  background: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+.form__input-counter input[name="adult"] {
+  margin-left: 40px;
+  margin-right: 20px;
+}
+.form__input-counter input[name="child"] {
+  margin-left: 35px;
+}
+.form__plus-icon {
+  position: absolute;
+  top: 13px;
+  width: 10px;
+  height: 10px;
+  background: url("/Sedona-Adaptive-/graph/img/icon-plus.svg") no-repeat 0 0;
+}
+input[name="adult"] ~ .form__plus-icon {
+  left: 210px;
+}
+input[name="child"] ~ .form__plus-icon {
+  left: 173px;
+}
+.form__minus-icon {
+  position: absolute;
+  top: 17px;
+  width: 10px;
+  height: 10px;
+  background: url("/Sedona-Adaptive-/graph/img/icon-minus.svg") no-repeat 0 0;
+}
+input[name="adult"] ~ .form__minus-icon {
+  left: 130px;
+}
+input[name="child"] ~ .form__minus-icon {
+  left: 90px;
+}
+.form input[name="income-date"] {
+  margin-left: 14px;
+}
+.form__btn {
+  display: block;
+  width: 460px;
+  padding: 17px 0;
+  background: #81b3d2;
+  border: none;
+  color: white;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 .contacts {
   padding: 35px 0;
@@ -223,6 +305,15 @@ footer p {
   height: 48px;
   background: #81b3d2;
 }
+.contacts__social-buttons--tw {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-tw.png") no-repeat 50% 50% #81b3d2;
+}
+.contacts__social-buttons--fb {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-fb.png") no-repeat 50% 50% #81b3d2;
+}
+.contacts__social-buttons--yt {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-yt.png") no-repeat 50% 50% #81b3d2;
+}
 .contacts span {
   display: inline-block;
   padding-right: 50px;
@@ -231,6 +322,9 @@ footer p {
 }
 .contacts span:nth-child(1) {
   background: url("/Sedona-Adaptive-/graph/pict/logo-htmlacademy.svg") no-repeat 90% 0;
+}
+.contacts span:nth-child(1):hover {
+  background-image: url("/Sedona-Adaptive-/graph/pict/logo-htmlacademy%20-%20hover.svg");
 }
 .contacts span:nth-child(2) {
   background: url("/Sedona-Adaptive-/graph/pict/logo-glukhanko.svg") no-repeat 75% 1px;

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sedona</title>
         <link rel="stylesheet" href="css/style.css">
+       <!--  <link rel="stylesheet" href="css/font-awesome.css"> -->
         <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         
     </head>
@@ -26,7 +27,12 @@
                       <li class="main-menu__item"><a href="#">Гостинницы</a></li>
                   </ul>
               </nav>
-              <div class="header-logo"><img src="/Sedona-Adaptive-/graph/img/header-bg-sedona.jpg" alt=""></div>
+              <div class="header-logo">
+                  <picture>
+                      <source media="(max-width: 768px)" srcset="/Sedona-Adaptive-/graph/img/header-bg-768.jpg">
+                      <img src="/Sedona-Adaptive-/graph/img/header-bg-sedona.jpg" alt="">
+                  </picture>
+              </div>
           </div>
           
       </header>
@@ -106,15 +112,33 @@
            
                <div class="form__header">Поиск гостиницы в Седоне</div>
                <form class="form" action="#" method="post">
-                   <input type="submit" value="Найти">
+                   <label class="form__input-text">Дата заезда:
+                       <input type="text" name="income-date" placeholder="24 апреля 2015">
+                   </label>
+                   <label class="form__input-text">Дата выезда:
+                       <input type="text" name="outcome-date" placeholder="29 апреля 2015">
+                   </label>
+                   <label class="form__input-counter  form__input-counter--1">
+                       Взрослые:
+                       <input type="text" name="adult" value="1">
+                       <a class="form__plus-icon" href="#"></a>
+                       <a class="form__minus-icon" href="#"></a>
+                   </label>
+                   <label class="form__input-counter  form__input-counter--2">
+                       Дети:
+                       <input type="text" name="child" value="2">
+                       <a class="form__plus-icon" href="#"></a>
+                       <a class="form__minus-icon" href="#"></a>
+                   </label>
+                   <input class="form__btn" type="submit" value="Найти">
                </form>
 
                <section class="contacts">
                    <div class="contacts__logo">#Visitsedona</div>
                    <div class="contacts__social">
-                       <a href="" class="contacts__social-buttons"></a>
-                       <a href="" class="contacts__social-buttons"></a>
-                       <a href="" class="contacts__social-buttons"></a>
+                       <a href="" class="contacts__social-buttons  contacts__social-buttons--tw"></a>
+                       <a href="" class="contacts__social-buttons  contacts__social-buttons--fb"></a>
+                       <a href="" class="contacts__social-buttons  contacts__social-buttons--yt"></a>
                    </div>
                    <div class="contacts__author">
                        <span>Website by</span>
