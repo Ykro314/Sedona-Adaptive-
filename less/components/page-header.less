@@ -26,6 +26,32 @@
         background: url("/Sedona-Adaptive-/graph/img/header-logo-sedona.png") no-repeat 50% 0;
         height: 70px;
     }
+    &__item--open {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 30px;
+        height: 4px;
+        background-color: @bg-btn;
+        cursor: pointer;
+    }
+    &__item--open:after {
+        content: '';
+        position: absolute;
+        top:10px; 
+        width: 30px;
+        height: 4px;
+        background: @bg-btn;
+    }
+    &__item--open:before {
+        content: '';
+        position: absolute;
+        top:20px; 
+        width: 30px;
+        height: 4px;
+        background-color: @bg-btn;
+    }
 }
 
 .header-logo {
