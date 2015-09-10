@@ -1,4 +1,57 @@
-.main-menu {
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    list-style: none;
+    padding: 0 5px;
+    margin: 0;
+    &__item {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #678fa8;
+        border-top: 1px solid #9ac2db;
+        a {
+            width: 100%;
+            display: block;
+            color: white;
+            background: @bg-btn;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            padding: 15px 0;
+        }
+        a:hover {
+            background: @bg-btn-hover;
+            transition: all 0.3s;
+        }
+        a:active {
+            background: #5496bd;
+            color: #94b9d2;
+        }
+    }
+    &__item:first-child {
+        border-top: none;
+    }
+    &__item:last-child a {
+        border-bottom: none;
+        box-shadow: inset 0px -4px 5px -2px #6c96b0;
+    }
+    &__item--close i{
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        content: "";
+        width: 23px;
+        height: 22px;
+        background: url("/Sedona-Adaptive-/graph/img/icon-cross.svg") no-repeat 0 0;
+        cursor: pointer;
+    }
+}
+
+.main-menu { 
+    background: white;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -20,6 +73,13 @@
             font-weight: @font-bold;
             font-size: @font-size-14;
             line-height: @line-height-26;
+        }
+        a:hover {
+            color: @bg-btn;
+            transition: all 0.3s;
+        }
+        a:active {
+            color: #cacaca;
         }
     }
     &__item--img {
@@ -51,6 +111,11 @@
         width: 30px;
         height: 4px;
         background-color: @bg-btn;
+    }
+    &__item--open:hover,
+    &__item--open:hover:after,
+    &__item--open:hover:before{
+        background: @bg-btn-hover;
     }
 }
 

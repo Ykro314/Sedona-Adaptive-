@@ -1,7 +1,25 @@
+body {
+  background-color: #f2f2f2;
+}
+.menu-translate,
+main,
+footer {
+  transform: translateY(0px);
+  transition: all 2s;
+}
+.mobile-menu-open {
+  transform: translateY(218px);
+  transition: all 2s;
+}
 .inner {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-top: none;
+  border-bottom: none;
 }
 .clearfix:after {
   content: "";
@@ -20,7 +38,59 @@ h3 {
   padding: 0;
   margin: 0;
 }
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  list-style: none;
+  padding: 0 5px;
+  margin: 0;
+}
+.mobile-menu__item {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+}
+.mobile-menu__item a {
+  width: 100%;
+  display: block;
+  color: white;
+  background: #81b3d2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 15px 0;
+}
+.mobile-menu__item a:hover {
+  background: #669ec0;
+  transition: all 0.3s;
+}
+.mobile-menu__item a:active {
+  background: #5496bd;
+  color: #94b9d2;
+}
+.mobile-menu__item:first-child {
+  border-top: none;
+}
+.mobile-menu__item:last-child a {
+  border-bottom: none;
+  box-shadow: inset 0px -4px 5px -2px #6c96b0;
+}
+.mobile-menu__item--close i {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  content: "";
+  width: 23px;
+  height: 22px;
+  background: url("/Sedona-Adaptive-/graph/img/icon-cross.svg") no-repeat 0 0;
+  cursor: pointer;
+}
 .main-menu {
+  background: white;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -44,6 +114,13 @@ h3 {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+}
+.main-menu__item a:hover {
+  color: #81b3d2;
+  transition: all 0.3s;
+}
+.main-menu__item a:active {
+  color: #cacaca;
 }
 .main-menu__item--img {
   background: url("/Sedona-Adaptive-/graph/img/header-logo-sedona.png") no-repeat 50% 0;
@@ -74,6 +151,11 @@ h3 {
   width: 30px;
   height: 4px;
   background-color: #81b3d2;
+}
+.main-menu__item--open:hover,
+.main-menu__item--open:hover:after,
+.main-menu__item--open:hover:before {
+  background: #669ec0;
 }
 .header-logo img {
   max-width: 100%;
@@ -187,7 +269,7 @@ footer {
   text-transform: uppercase;
 }
 footer .inner {
-  background: url("/Sedona-Adaptive-/graph/img/footer-map-1280.jpg") no-repeat 0 265px;
+  background: url("/Sedona-Adaptive-/graph/img/footer-map-1280.jpg") no-repeat 0 265px white;
 }
 footer h2 {
   width: 100%;
@@ -217,6 +299,7 @@ footer p {
   color: white;
   font-weight: bold;
   background: #766357;
+  box-shadow: 0px 3px 10px 0px grey;
 }
 .form {
   width: 570px;
@@ -227,6 +310,7 @@ footer p {
   margin-bottom: 80px;
   box-sizing: border-box;
   background: white;
+  box-shadow: 0px 3px 10px -2px grey;
 }
 .form__input-text {
   display: block;
@@ -247,6 +331,7 @@ footer p {
 }
 .form__input-text input[type='text']:hover {
   background-image: url("/Sedona-Adaptive-/graph/img/icon-calendar-hover.svg");
+  background-color: #ebebeb;
 }
 .form__input-counter {
   display: inline-block;
@@ -264,6 +349,9 @@ footer p {
   box-sizing: border-box;
   padding: 10px 15px;
 }
+.form__input-counter input:hover {
+  background-color: #ebebeb;
+}
 .form__input-counter input[name="adult"] {
   margin-left: 40px;
   margin-right: 20px;
@@ -278,6 +366,12 @@ footer p {
   height: 10px;
   background: url("/Sedona-Adaptive-/graph/img/icon-plus.svg") no-repeat 0 0;
 }
+.form__plus-icon:hover {
+  background-image: url("/Sedona-Adaptive-/graph/img/icon-plus-hover.svg");
+}
+.form__plus-icon:active {
+  background-image: url("/Sedona-Adaptive-/graph/img/icon-plus-down.svg");
+}
 input[name="adult"] ~ .form__plus-icon {
   left: 210px;
 }
@@ -290,6 +384,12 @@ input[name="child"] ~ .form__plus-icon {
   width: 10px;
   height: 10px;
   background: url("/Sedona-Adaptive-/graph/img/icon-minus.svg") no-repeat 0 0;
+}
+.form__minus-icon:hover {
+  background-image: url("/Sedona-Adaptive-/graph/img/icon-minus-hover.svg");
+}
+.form__minus-icon:active {
+  background-image: url("/Sedona-Adaptive-/graph/img/icon-minus-down.svg");
 }
 input[name="adult"] ~ .form__minus-icon {
   left: 130px;
@@ -311,6 +411,14 @@ input[name="child"] ~ .form__minus-icon {
   line-height: 26px;
   text-transform: uppercase;
 }
+.form__btn:hover {
+  background: #669ec0;
+  transition: all 0.3s;
+}
+.form__btn:active {
+  background: #5496bd;
+  color: #94b9d2;
+}
 .contacts {
   padding: 35px 0;
 }
@@ -327,6 +435,11 @@ input[name="child"] ~ .form__minus-icon {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  cursor: pointer;
+}
+.contacts__logo:hover {
+  color: #81b3d2;
+  transition: all 0.3s;
 }
 .contacts__social-buttons {
   margin-right: 2px;
@@ -335,14 +448,27 @@ input[name="child"] ~ .form__minus-icon {
   height: 48px;
   background: #81b3d2;
 }
+.contacts__social-buttons:hover {
+  background-color: #669ec0;
+  transition: all 0.3s;
+}
 .contacts__social-buttons--tw {
   background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-tw.png") no-repeat 50% 50% #81b3d2;
+}
+.contacts__social-buttons--tw:active {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-tw-down.png") no-repeat 50% 50% #81b3d2;
 }
 .contacts__social-buttons--fb {
   background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-fb.png") no-repeat 50% 50% #81b3d2;
 }
+.contacts__social-buttons--fb:active {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-fb-down.png") no-repeat 50% 50% #81b3d2;
+}
 .contacts__social-buttons--yt {
   background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-yt.png") no-repeat 50% 50% #81b3d2;
+}
+.contacts__social-buttons--yt:active {
+  background: url("/Sedona-Adaptive-/graph/img/footer-social_icon-yt-down.png") no-repeat 50% 50% #81b3d2;
 }
 .contacts span {
   display: inline-block;
@@ -356,10 +482,28 @@ input[name="child"] ~ .form__minus-icon {
 .contacts span:nth-child(1):hover {
   background-image: url("/Sedona-Adaptive-/graph/pict/logo-htmlacademy%20-%20hover.svg");
 }
+.contacts span:nth-child(1):active {
+  background-image: url("/Sedona-Adaptive-/graph/pict/logo-htmlacademy-down.svg");
+}
 .contacts span:nth-child(2) {
   background: url("/Sedona-Adaptive-/graph/pict/logo-glukhanko.svg") no-repeat 75% 1px;
 }
+.contacts span:nth-child(2):hover {
+  background: url("/Sedona-Adaptive-/graph/pict/logo-glukhanko-hover.svg") no-repeat 75% 1px;
+}
+.contacts span:nth-child(2):active {
+  background: url("/Sedona-Adaptive-/graph/pict/logo-glukhanko-down.svg") no-repeat 75% 1px;
+}
 @media (max-width: 600px) {
+  /*    .menu-translate,
+    main,
+    footer{
+        transform: translateY(0);
+        transition: all 2s;
+    } */
+  .mobile-menu {
+    display: block;
+  }
   .main-menu__item {
     display: none;
   }

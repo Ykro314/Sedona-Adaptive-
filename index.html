@@ -18,22 +18,30 @@
       <header>
          
           <div class='inner'>
-              <nav>
-                  <ul class="main-menu">
-                      <li class="main-menu__item"><a href="#">Информация</a></li>
-                      <li class="main-menu__item"><a href="#">Фото и видео</a></li>
-                      <li class="main-menu__item  main-menu__item--img"><!-- <img src="graph/img/logo-sedona@1x.png" alt=""> --></li>
-                      <li class="main-menu__item"><a href="#">Карта штата</a></li>
-                      <li class="main-menu__item"><a href="#">Гостинницы</a></li>
-                      <li class="main-menu__item--open"><a class="main-menu__icon-open"href="#"></a></li>
-                  </ul>
-              </nav>
-              <div class="header-logo">
-                  <picture>
-                      <source media="(max-width: 325px)" srcset="/Sedona-Adaptive-/graph/img/header-bg-320.jpg">
-                      <source media="(max-width: 768px)" srcset="/Sedona-Adaptive-/graph/img/header-bg-768.jpg">
-                      <img src="/Sedona-Adaptive-/graph/img/header-bg-sedona.jpg" alt="">
-                  </picture>
+              <ul class="mobile-menu">
+                  <li class="mobile-menu__item mobile-menu__item--close"><a href="#">Карта штата</a><i></i></li>
+                  <li class="mobile-menu__item"><a href="#">Информация</a></li>
+                  <li class="mobile-menu__item"><a href="#">Фото и видео</a></li>
+                  <li class="mobile-menu__item"><a href="#">Гостинницы</a></li>
+              </ul>
+              <div class="menu-translate ">
+                  <nav>
+                      <ul class="main-menu">
+                          <li class="main-menu__item"><a href="#">Информация</a></li>
+                          <li class="main-menu__item"><a href="#">Фото и видео</a></li>
+                          <li class="main-menu__item  main-menu__item--img"><!-- <img src="graph/img/logo-sedona@1x.png" alt=""> --></li>
+                          <li class="main-menu__item"><a href="#">Карта штата</a></li>
+                          <li class="main-menu__item"><a href="#">Гостинницы</a></li>
+                          <li class="main-menu__item--open"></li>
+                      </ul>
+                  </nav>
+                  <div class="header-logo">
+                      <picture>
+                          <source media="(max-width: 325px)" srcset="/Sedona-Adaptive-/graph/img/header-bg-320.jpg">
+                          <source media="(max-width: 768px)" srcset="/Sedona-Adaptive-/graph/img/header-bg-768.jpg">
+                          <img src="/Sedona-Adaptive-/graph/img/header-bg-sedona.jpg" alt="">
+                      </picture>
+                  </div>
               </div>
           </div>
           
@@ -41,7 +49,7 @@
        
        
        
-       <main>
+       <main class="block-main ">
           
            <div class="inner">
                <article class="promo">
@@ -106,7 +114,7 @@
        
        
        
-       <footer>
+       <footer class="block-footer ">
            
            <div class="inner">
                <h2>Заинтересовались?</h2>
@@ -151,6 +159,28 @@
            
        </footer>
        
+       <script>
+           var menu_icon = document.querySelector(".main-menu__item--open");
+           var menu_close = document.querySelector(".mobile-menu__item--close i");
+           var header = document.querySelector(".menu-translate");
+           var main = document.querySelector(".block-main");
+           var footer = document.querySelector(".block-footer");
+           
+           menu_icon.addEventListener("click", function(event){
+               event.preventDefault;
+               header.classList.add("mobile-menu-open");
+               main.classList.add("mobile-menu-open");
+               footer.classList.add("mobile-menu-open");
+           }, false);
+           
+           menu_close.addEventListener("click", function(event){
+               event.preventDefault;
+               header.classList.remove("mobile-menu-open");
+               main.classList.remove("mobile-menu-open");
+               footer.classList.remove("mobile-menu-open");
+           }, false);
+           
+       </script>
        
        
     </body>
